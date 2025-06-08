@@ -29,3 +29,14 @@ def largest(list):
     return largest_number
 
 print(largest([1,-9,2,8,3,-7,4,0,-4]))
+
+# Write the function that returns the smallest element in an array.
+print("----------- Returns the smallest element ----------")
+def smallest(list):
+    smallest_number = list[0]
+    for i in range(1,len(list)):
+        if list[i] < smallest_number:
+            smallest_number = list[i]
+    return smallest_number
+
+print(smallest([1,-9,2,8,3,-7,4,0,-4]))

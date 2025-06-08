@@ -38,3 +38,17 @@ function largest(arr){
 }
 
 console.log(largest([1,-9,2,8,3,-7,4,0,-4]))
+
+// Write the function that returns the smallest element in an array.
+console.log("----------- Returns the smallest element ----------")
+function smallest(arr){
+    let smallestNumber = arr[0]
+    for (let i = 1;i<arr.length;i++){
+        if(arr[i] < smallestNumber){
+            smallestNumber = arr[i]
+        }
+    }
+    return smallestNumber
+}
+
+console.log(smallest([1,-9,2,8,3,-7,4,0,-4]))
