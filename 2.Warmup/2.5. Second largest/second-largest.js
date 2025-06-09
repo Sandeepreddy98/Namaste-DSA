@@ -1,3 +1,4 @@
+// Create a function to find the second largest using sorting
 function secondLargestUsingSort(arr){
     // using sort
     const sortedArr = arr.sort((a,b) => a-b)
@@ -8,6 +9,7 @@ function secondLargestUsingSort(arr){
 
 console.log(secondLargestUsingSort([1,-9,2,8,3,-7,4,0,-4]))
 
+// Create a function to find the second largest without sorting
 function secondLargest(arr){
     let firstLargest = arr[0]
     let secondLargestEle = arr[0]
