@@ -13,7 +13,7 @@ def second_largest_without_sort(list):
         if list[i] > first_largest:
             second_largest = first_largest
             first_largest = list[i]
-        elif list[i] > second_largest:
+        elif list[i] > second_largest and list[i] != first_largest:
             second_largest = list[i]
     return second_largest
 
