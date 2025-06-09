@@ -7,3 +7,19 @@ function secondLargestUsingSort(arr){
 }
 
 console.log(secondLargestUsingSort([1,-9,2,8,3,-7,4,0,-4]))
+
+function secondLargest(arr){
+    let firstLargest = arr[0]
+    let secondLargestEle = arr[0]
+    for(let i=1;i<arr.length;i++){
+        if(arr[i] > firstLargest){
+            secondLargestEle = firstLargest
+            firstLargest = arr[i]
+        }else if (arr[i] > secondLargestEle){
+            secondLargestEle = arr[i]
+        }
+    }
+    return secondLargestEle
+}
+
+console.log(secondLargest([1,-9,2,8,3,-7,4,0,-4]))
