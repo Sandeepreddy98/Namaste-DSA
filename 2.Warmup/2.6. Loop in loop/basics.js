@@ -21,3 +21,15 @@ function conditionalNestedLoop(x,y){
 }
 
 conditionalNestedLoop(3,3)
+
+//Nested loop with condition j < i
+console.log("------ Nested Loop with condition j <= i---------")
+function conditionalNestedLoop2(x,y){
+    for(let i=0;i<x;i++){
+        for(let j =0;j<=i;j++){
+            console.log(i,j)
+        }
+    }
+}
+
+conditionalNestedLoop2(3,3)
