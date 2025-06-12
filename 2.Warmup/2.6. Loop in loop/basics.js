@@ -57,3 +57,15 @@ function conditionalNestedLoop3(x,y){
 }
 
 conditionalNestedLoop3(3,3)
+
+//Nested loop with condition i=3;i>0;i-- & j=0;j<3;j++
+console.log("------ Nested Loop with condition i=3;i>0;i-- & j=0;j<i;j++  -----------")
+function conditionalNestedLoop3(x,y){
+    for(let i=x;i>0;i--){
+        for(let j =0;j<i;j++){
+            console.log(i,j)
+        }
+    }
+}
+
+conditionalNestedLoop3(3,3)
