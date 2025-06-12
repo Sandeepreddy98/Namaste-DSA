@@ -33,3 +33,15 @@ function conditionalNestedLoop2(x,y){
 }
 
 conditionalNestedLoop2(3,3)
+
+//Nested loop with condition j = i; j>0;j--
+console.log("------ Nested Loop with condition j = i; j>0;j-----------")
+function conditionalNestedLoop2(x,y){
+    for(let i=0;i<x;i++){
+        for(let j =i;j>0;j--){
+            console.log(i,j)
+        }
+    }
+}
+
+conditionalNestedLoop2(3,3)
