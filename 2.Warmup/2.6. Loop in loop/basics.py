@@ -34,11 +34,11 @@ def conditionalNestedLoop2(x,y):
         
 conditionalNestedLoop2(3,3)
 
-# Nested loop with condition j = i; j>=0;j
-print("------ Nested Loop with condition j = i; j>=0;j---------")
+# Nested loop with condition  i=3;i>0;i-- & j=0;j<i;j++
+print("------ Nested Loop with condition  i=3;i>0;i-- & j=0;j<i;j++ ---------")
 def conditionalNestedLoop2(x,y):
-    for i in range(0,x):
-        for j in range(i,-1,-1):
+    for i in range(x,0,-1):
+        for j in range(0,i):
             print(i,j)
         
 conditionalNestedLoop2(3,3)
