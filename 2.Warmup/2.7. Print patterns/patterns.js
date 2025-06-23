@@ -65,3 +65,20 @@ function rightAngledIncrementYAxis(n){
 }
 
 console.log(rightAngledIncrementYAxis(4))
+
+// Number Pattern - Right Angled Increment - Inverted
+console.log("------ Number Pattern - Right Angled Increment - Inverted ---------")
+
+function rightAngledNumberIncrementInverted(n){
+    let pattern = ""
+    for(let i=1;i<=n;i++){
+        let row = ''
+        for(let j = 1;j<=n-i+1;j++){
+            row += j
+        }
+        pattern += row + (i !== n ? "\n" : '')
+    }
+    return pattern
+}
+
+console.log(rightAngledNumberIncrementInverted(4))
