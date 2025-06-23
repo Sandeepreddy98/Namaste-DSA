@@ -99,3 +99,19 @@ function rightTrianglePatternInverted(n){
 }
 
 console.log(rightTrianglePatternInverted(4))
+
+//Star Pattern - Right Angled Triangle - Mirrored
+console.log("------ Star Pattern - Right Angled Triangle - Mirrored ---------")
+
+function rightAngledTriangleMirrored(n){
+    let pattern = ''
+    for(let i = 0;i<n;i++){
+        let row = ''
+        for(let j=0 ;j<n;j++){
+            row += j < n-1-i ? ' ' : '*'
+        }
+        pattern += row +(i !== n-1 ? "\n" : '')
+    }
+    return pattern
+}
+console.log(rightAngledTriangleMirrored(4))
