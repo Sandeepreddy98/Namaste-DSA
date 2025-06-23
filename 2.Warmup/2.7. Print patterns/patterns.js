@@ -115,3 +115,20 @@ function rightAngledTriangleMirrored(n){
     return pattern
 }
 console.log(rightAngledTriangleMirrored(4))
+
+//Star Pattern - Right Angled Triangle
+console.log("------ Star Pattern - Right Angled Triangle - (1-0) ---------")
+
+function rightTrianglePatternOneZero(n){
+    let pattern = ''
+    for(let i=0;i<n;i++){
+        let row = ''
+        for(let j =0;j<=i;j++){
+            row += (j%2 === 0 ? 1 : 0)
+        }
+        pattern += row +(i !== n-1 ? "\n" : '')
+    }
+    return pattern
+}
+
+console.log(rightTrianglePatternOneZero(4))
