@@ -82,3 +82,20 @@ function rightAngledNumberIncrementInverted(n){
 }
 
 console.log(rightAngledNumberIncrementInverted(4))
+
+//Star Pattern - Right Angled Triangle - Inverted
+console.log("------ Star Pattern - Right Angled Triangle- Inverted ---------")
+
+function rightTrianglePatternInverted(n){
+    let pattern = ''
+    for(let i=0;i<n;i++){
+        let row = ''
+        for(let j =0;j<n-i;j++){
+            row += "*"
+        }
+        pattern += row +(i !== n-1 ? "\n" : '')
+    }
+    return pattern
+}
+
+console.log(rightTrianglePatternInverted(4))
