@@ -1,6 +1,6 @@
 # Namaste-DSA
 
-# Course Content
+## Course Content
 
 ## 2. Warmup
 ### 2.1. Programming101
