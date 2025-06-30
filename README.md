@@ -21,3 +21,4 @@
 ### 4.2 Remove Element
 ### 4.3 Reverse String
 ### 4.4 Best Time to Buy and Sell Stocks
+### 4.5 Merge Sorted Arrays
