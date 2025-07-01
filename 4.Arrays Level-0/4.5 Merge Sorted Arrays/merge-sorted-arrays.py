@@ -13,3 +13,23 @@ def mergeSortedArrayBruteForce(nums1, m, nums2, n):
 print(mergeSortedArrayBruteForce([1,2,3,0,0,0],3,[2,5,6],3))
 print(mergeSortedArrayBruteForce([1],1,[],0))
 print(mergeSortedArrayBruteForce([2,0],1,[1],1))
+
+# Utilising an extra space - Time Complexity :- O(m+n) , Space Complexity = O(m)
+def mergeSortedArrayWithExtraSpace(nums1, m, nums2, n):
+    num1_copy = nums1[:m]
+    pointer1 = 0
+    pointer2 = 0
+
+    for i in range(len(nums1)):
+        if (pointer1 < m and (pointer2 >= n or num1_copy[pointer1] < nums2[pointer2])):
+            nums1[i] = num1_copy[pointer1]
+            pointer1 += 1
+        else:
+            nums1[i] = nums2[pointer2]
+            pointer2 += 1
+
+    return nums1
+
+print(mergeSortedArrayWithExtraSpace([1,2,3,0,0,0],3,[2,5,6],3))
+print(mergeSortedArrayWithExtraSpace([1],1,[],0))
+print(mergeSortedArrayWithExtraSpace([2,0],1,[1],1))
