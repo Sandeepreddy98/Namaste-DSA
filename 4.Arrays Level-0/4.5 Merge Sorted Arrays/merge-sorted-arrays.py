@@ -33,3 +33,23 @@ def mergeSortedArrayWithExtraSpace(nums1, m, nums2, n):
 print(mergeSortedArrayWithExtraSpace([1,2,3,0,0,0],3,[2,5,6],3))
 print(mergeSortedArrayWithExtraSpace([1],1,[],0))
 print(mergeSortedArrayWithExtraSpace([2,0],1,[1],1))
+
+# Merging sorted array in place - Time Complexity :- O(m+n) , No extra space
+def mergeSortedArray(nums1, m, nums2, n):
+    p1 = m-1
+    p2 = n-1
+    
+    for i in range(0,m+n-1,-1):
+        if p2 < 0:
+            break
+        if p1 >= 0 and nums1[p1] > nums2[p2]:
+            nums1[i] = nums1[p1]
+            p1 -= 1
+        else:
+            nums1[i] = nums2[p2]
+            p2 -= 1
+    return nums1
+
+print(mergeSortedArray([1,2,3,0,0,0],3,[2,5,6],3))
+print(mergeSortedArray([1],1,[],0))
+print(mergeSortedArray([2,0],1,[1],1))
