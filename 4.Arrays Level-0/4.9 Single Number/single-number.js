@@ -18,15 +18,19 @@ Output: 1
 
 // Brute force approach 
 
-var missingNumber = function(nums) {
-    let n = nums.length
-    let sumOfNumbers = (n * (n+1)) / 2
-    console.log(sumOfNumbers)
-    let sumOfElements = 0
+var singleNumber = function(nums) {
+    let hash = {}
     for(let i=0;i<nums.length;i++){
-        sumOfElements = sumOfElements + nums[i]
+        if(hash[nums[i]]){
+            hash[nums[i]] = hash[nums[i]] + 1
+        }else{
+            hash[nums[i]] = 1
+        }
     }
-    return sumOfNumbers - sumOfElements
+    let keysArray = Object.keys(hash)
+    for(let i=0;i<keysArray.length;i++){
+        if(hash[keysArray[i]] === 1){
+            return parseInt(keysArray[i])
+        }
+    }
 };
-
-console.log(missingNumber([3,0,1]))
