@@ -34,3 +34,14 @@ var singleNumber = function(nums) {
         }
     }
 };
+
+console.log(singleNumber([4,1,2,1,2]))
+
+//Using Bitwise XOR
+var singleNumberXOR = function(nums){
+    let xor = 0
+    for(let i=0;i<nums.length;i++){
+        xor = xor ^ nums[i]
+    }
+    return xor
+}
