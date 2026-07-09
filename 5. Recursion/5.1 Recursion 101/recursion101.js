@@ -25,7 +25,7 @@ print(5)
 
 const n = 20
 function print1ton(x){
-    if(x > 20) return 
+    if(x > n) return 
     console.log(x)
     print1ton(x+1)
 }
