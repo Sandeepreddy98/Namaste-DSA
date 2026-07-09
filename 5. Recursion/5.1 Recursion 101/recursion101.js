@@ -20,3 +20,14 @@ function print(num){
 }
 
 print(5)
+
+// Print numbers from 1...n using recursion
+
+const n = 20
+function print1ton(x){
+    if(x > 20) return 
+    console.log(x)
+    print1ton(x+1)
+}
+
+print1ton(1)
